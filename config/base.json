@@ -1,0 +1,193 @@
+{
+  "chain_id": 8453,
+  "owner": "0x1111111111111111111111111111111111111111",
+  "factories": [
+    {
+      "address": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+      "kind": "v3",
+      "name": "Uniswap V3",
+      "keys": [
+        100,
+        500,
+        3000,
+        10000
+      ],
+      "quoter": "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a"
+    },
+    {
+      "address": "0x5e7bb104d84c7cb9b682aac2f3d509f5f406809a",
+      "kind": "slipstream",
+      "name": "Aerodrome Slipstream initial",
+      "keys": [
+        1,
+        50,
+        100,
+        200,
+        2000
+      ],
+      "quoter": "0x254cf9e1e6e233aa1ac962cb9b05b2cfeaae15b0"
+    },
+    {
+      "address": "0xade65c38cd4849adba595a4323a8c7ddfe89716a",
+      "kind": "slipstream",
+      "name": "Aerodrome Slipstream caps",
+      "keys": [
+        1,
+        50,
+        100,
+        200,
+        2000
+      ],
+      "quoter": "0x3d4c22254f86f64b7ec90ab8f7aec1fbfd271c6c"
+    },
+    {
+      "address": "0xf8f2eb4940cfe7d13603dddd87f123820fc061ef",
+      "kind": "slipstream",
+      "name": "Aerodrome Slipstream gauges V3",
+      "keys": [
+        1,
+        50,
+        100,
+        200,
+        2000
+      ],
+      "quoter": "0x514c8b5f54112481e28028f1166bd78501089259"
+    },
+    {
+      "name": "Uniswap V2 Base",
+      "kind": "v2",
+      "address": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "keys": []
+    }
+  ],
+  "settlement_tokens": [
+    {
+      "address": "0x4200000000000000000000000000000000000006",
+      "symbol": "WETH",
+      "decimals": 18,
+      "max_input_raw": "57896044618658097711785492504343953926634992332820282019728792003956564819967",
+      "min_net_raw": "2000000000000"
+    },
+    {
+      "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "symbol": "USDC",
+      "decimals": 6,
+      "max_input_raw": "57896044618658097711785492504343953926634992332820282019728792003956564819967",
+      "min_net_raw": "10000"
+    }
+  ],
+  "seed_tokens": [
+    "0x4200000000000000000000000000000000000006",
+    "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+    "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+    "0x22af33fe49fd1fa80c7149773dde5890d3c76f3b",
+    "0x4f9fd6be4a90f2620860d680c0d4d5fb53d1a825"
+  ],
+  "reference_pools": [
+    "0x1ef035205f94c7734827961c438474d089a334a0",
+    "0x2df380544b88adb3ad0a94100dcc45fd705aae2d"
+  ],
+  "policy": {
+    "mode": "shadow",
+    "feed_mode": "atomic-state",
+    "max_hops": 4,
+    "bitmap_radius": 2,
+    "max_gas": 6000000,
+    "gas_per_hop": 200000,
+    "gas_overhead": 180000,
+    "gas_per_tick_crossing": 25000,
+    "min_priority_fee_wei": 1000000,
+    "max_setup_gas_price_wei": 100000000,
+    "min_net_profit_usdc_raw": "100000",
+    "min_net_profit_fee_bps": 0,
+    "l1_fee_allowance_wei": "1000000000000",
+    "eth_usdc_ceiling": 5000,
+    "max_total_fee_wei": "300000000000000",
+    "max_daily_fee_wei": "1000000000000000",
+    "max_consecutive_failures": 3,
+    "snapshot_max_age_ms": 2000,
+    "max_quote_ms": 100,
+    "poll_interval_seconds": 2,
+    "pending_poll_interval_seconds": 0.2,
+    "universe_refresh_seconds": 30,
+    "discovery_catchup_blocks": 32,
+    "snapshot_ticks_per_side": 4,
+    "final_validation_max_age_ms": 500,
+    "max_pools": 300,
+    "max_new_tokens_per_refresh": 12,
+    "recording_max_mb": 512,
+    "decision_retention": 2048,
+    "snapshot_read_gas": 90000000,
+    "opportunity_retention_mb": 128,
+    "opportunity_retention_count": 512,
+    "sizing_mode": "liquidity",
+    "cycle_pages": true,
+    "route_groups_per_page": 96,
+    "discovery_mode": "logs",
+    "discovery_rpc_url": "https://base.gateway.tenderly.co",
+    "discovery_request_interval_seconds": 0.2,
+    "deep_ticks_per_side": 64,
+    "profit_aware_bidding": true,
+    "bid_profit_share_bps": 10000,
+    "priority_fee_percentile": 90,
+    "cap_migration": "liquidity-v2",
+    "snapshot_encoding": "packed-v1",
+    "aggregate_execution_context": true,
+    "activity_priority": true,
+    "activity_rpc_url": "https://base.drpc.org",
+    "activity_poll_seconds": 1,
+    "page_ack_wait_ms": 100,
+    "activity_ws_hourly_byte_limit": 500000,
+    "activity_ws_daily_request_limit": 80000,
+    "executor_migration": "mixed-v1",
+    "hot_lane_enabled": true,
+    "hot_lane_min_interval_seconds": 0.5,
+    "hot_lane_ordinary_interval_seconds": 1.0,
+    "identity_rpc_url": "https://base.gateway.tenderly.co",
+    "activity_ws_pacing_mode": "session"
+  },
+  "sources": [
+    "https://developers.uniswap.org/docs/protocols/v3/deployments/v3-base-deployments",
+    "https://github.com/aerodrome-finance/slipstream/blob/main/README.md",
+    "https://developers.uniswap.org/docs/protocols/v2/deployments"
+  ],
+  "unsupported_transfer_tokens": {
+    "0x5c4348e963369e124cb8e9b1a619f2f6f1717b58": "Observed receipt shortfall; exact-receipt executor incompatible. Sealed-anchor diagnostics 2026-10-11.",
+    "0x8ea57c4d7a6a88c90bcf038d37939fae61305a88": "Observed receipt shortfall; exact-receipt executor incompatible. Sealed-anchor diagnostic frame 3487, 2026-10-11.",
+    "0xff0c532fdb8cd566ae169c1cb157ff2bdc83e105": "Observed receipt shortfall; exact-receipt executor incompatible. Sealed-anchor diagnostic frame 517, 2026-10-11.",
+    "0xa4a2e2ca3fbfe21aed83471d28b6f65a233c6e00": "TIBBIR executor-to-V2-pool receipt shortfall 1%, sealed block 52488990, 2026-10-12. Exact-receipt executor incompatible; evidence/tibbir-transfer-diagnosis-20261012.json."
+  },
+  "v4": {
+    "enabled": true,
+    "bitmap_radius": 16,
+    "tick_limit": 128,
+    "poll_seconds": 1
+  },
+  "structural": {
+    "enabled": true,
+    "mode": "morpho-universe-and-psm",
+    "preserve_existing_fee_caps": true,
+    "market_universe": true,
+    "atlas_enabled": false,
+    "atlas_bond_wei": "0",
+    "conversion_factories": [
+      {
+        "address": "0x420dd381b31aef6683db6b902084cb0ffece40da",
+        "name": "Aerodrome stable and volatile",
+        "kind": "aerodrome_v2",
+        "keys": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "strategy_suite": {
+    "enabled": true,
+    "read_methods_per_second": 6
+  },
+  "venues": {
+    "enabled": true
+  }
+}

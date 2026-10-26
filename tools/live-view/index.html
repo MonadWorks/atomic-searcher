@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>套利运行记录</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<main>
+  <header><a class="brand" href="/">套利运行记录<span>BASE · 本机实况</span></a><div class="refresh"><span id="refresh-light" class="dot"></span><span id="refreshed">正在读取记录</span><button id="refresh" type="button">刷新</button></div></header>
+  <p id="error" class="error" role="alert" hidden></p>
+  <section class="overview" aria-labelledby="state">
+    <div><p class="eyebrow" id="run-label">运行状态</p><h1 id="state">正在连接查看页面</h1><p id="activity" class="intro">读取本机运行记录与交易账本。</p></div>
+    <dl class="connections"><div><dt>自动交易</dt><dd id="executor">—</dd></div><div><dt>数据通道</dt><dd id="stream">—</dd><dd id="stream-note" class="small" hidden></dd></div><div><dt>最近一次有效计算</dt><dd id="data-time">—</dd></div></dl>
+  </section>
+  <section class="money" aria-labelledby="money-title">
+    <div class="section-head"><h2 id="money-title">套利交易的实际收支</h2><span>按已入块回执统计 · 包含历史执行器</span></div>
+    <div class="money-grid"><div class="incoming"><span class="money-label">套利到账，未扣网络费</span><div class="balance"><strong id="usdc">—</strong><span>USDC</span></div><div class="secondary-balance"><span id="weth">—</span> WETH</div></div><div class="cost"><span class="money-label">已支付网络费</span><div class="fee"><strong id="fee">—</strong><span>ETH</span></div><p>包含成功、回滚和链上取消交易的费用。</p></div></div>
+    <p id="accounting-note" class="footnote">收入和网络费按各自资产列示；部署费用不计入此表。</p>
+  </section>
+  <section class="history" aria-labelledby="trades-title"><div class="section-head"><h2 id="trades-title">交易记录</h2><a id="wallet-link" target="_blank" rel="noopener noreferrer" hidden>打开钱包链上记录 ↗</a></div><div id="trades-empty" class="empty" hidden>还没有套利交易。提交后会先显示“等待回执”，入块后显示结果和实际费用。</div><div class="table-wrap"><table id="trades-table"><thead><tr><th>发生时间</th><th>执行结果</th><th>套利到账</th><th>网络费</th><th>凭证</th></tr></thead><tbody id="trades"></tbody></table></div></section>
+  <section class="opportunities" aria-labelledby="opportunities-title"><div class="section-head"><h2 id="opportunities-title">报价与校验记录</h2><span>本次运行 · 报价通过整笔校验后才进入提交环节</span></div><div id="opportunities-empty" class="empty" hidden>正在寻找符合条件的价差。出现候选后，这里会显示路线、预计净收益，以及提交或跳过的结果。</div><div id="opportunities"></div><p class="footnote">候选报价与实际成交分开记录。实际到账见上方交易回执。</p></section>
+  <footer><span>每两秒读取本机记录。关闭此页面不会停止交易。</span><span id="contract"></span></footer>
+</main>
+</body></html>
