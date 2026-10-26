@@ -1,0 +1,11 @@
+title = "Atomic Searcher publication checks"
+
+[extend]
+useDefault = true
+
+# Public 20-byte EVM addresses are not credentials. This deliberately does NOT
+# allow 32-byte private keys, complete files, test directories, or entropy rules.
+[[allowlists]]
+description = "Public EVM addresses only"
+regexTarget = "secret"
+regexes = ['''^0x[0-9a-fA-F]{40}$''']
