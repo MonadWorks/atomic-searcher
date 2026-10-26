@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Atomic Searcher</title>
+  <desc id="desc">A Base arbitrage research project. Observe, evaluate, execute, reconcile.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102330"/><stop offset="1" stop-color="#07131c"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#23404e" stroke-width=".5"/></pattern>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="20" fill="url(#grid)" opacity=".5"/>
+  <rect x="54" y="48" width="6" height="22" rx="3" fill="#79e6c5"/>
+  <text x="76" y="65" fill="#79e6c5" font-family="monospace" font-size="15" letter-spacing="3">OPEN RESEARCH / BASE</text>
+  <text x="52" y="143" fill="#f5f8f8" font-family="Arial,Helvetica,sans-serif" font-size="57" font-weight="700" letter-spacing="-2">Atomic Searcher</text>
+  <text x="55" y="184" fill="#a9bbc7" font-family="Arial,Helvetica,sans-serif" font-size="19">From a price signal to an accounted transaction.</text>
+  <text x="55" y="250" fill="#84a2b3" font-family="monospace" font-size="13" letter-spacing="2">OBSERVE → EVALUATE → EXECUTE → RECONCILE</text>
+  <path d="M845 88L1050 150L845 220Z" fill="#15303b" stroke="#345b69" stroke-width="2"/>
+  <path d="M863 90L1028 140M1038 166L865 220M835 200V108" fill="none" stroke="#79e6c5" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="845" cy="88" r="15" fill="#102330" stroke="#79e6c5" stroke-width="3"/>
+  <circle cx="1050" cy="150" r="15" fill="#102330" stroke="#79e6c5" stroke-width="3"/>
+  <circle cx="845" cy="220" r="15" fill="#102330" stroke="#79e6c5" stroke-width="3"/>
+  <text x="804" y="52" fill="#a9bbc7" font-family="monospace" font-size="12">SIGNAL</text>
+  <text x="1080" y="154" fill="#a9bbc7" font-family="monospace" font-size="12">CHECK</text>
+  <text x="800" y="264" fill="#a9bbc7" font-family="monospace" font-size="12">RECEIPT</text>
+</svg>

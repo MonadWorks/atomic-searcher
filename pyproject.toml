@@ -5,6 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "atomic-searcher"
 version = "0.1.0"
+description = "Base atomic-arbitrage research implementation and regression suite"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "MonadWorks contributors"}]
 requires-python = ">=3.11"
 dependencies = ["requests==2.34.2", "httpx[socks]==0.28.1", "eth-abi==6.0.0", "eth-utils==5.3.1", "eth-hash[pycryptodome]==0.8.0", "pycryptodome==3.24.0", "websockets==17.1", "python-socks==3.1.1", "eth-account==0.13.7"]
 
@@ -13,6 +17,10 @@ test = ["pytest==9.1.1"]
 
 [project.scripts]
 atomic-searcher = "searcher.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/MonadWorks/atomic-searcher"
+Issues = "https://github.com/MonadWorks/atomic-searcher/issues"
 
 [tool.setuptools.packages.find]
 include = ["searcher*"]
